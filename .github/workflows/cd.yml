@@ -1,8 +1,7 @@
 name: CD
 on:
-  push:
-    tags:
-      - v*
+  pull_request: 
+    branches: [ humble ]
 
 jobs:
   ecr_setting:
