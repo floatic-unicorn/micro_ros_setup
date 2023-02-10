@@ -73,4 +73,4 @@ jobs:
       
       - name: Upload to S3
         run: |
-          aws s3 cp flody_ws/etc s3://robotics-workflow-archive/micro_ros_setup --include "*.deb" --recursive 
+          aws s3 cp $(ls flody_ws/*.deb) s3://robotics-workflow-archive/micro_ros_setup/
