@@ -61,7 +61,7 @@ jobs:
 
       - name: Checkout submodules
         run: |
-          cd flody_ws/etc/src
+          cd flody_ws/etc/src/micro_ros_setup
           git submodule update --init --recursive
       
       - name: Generate debian file
