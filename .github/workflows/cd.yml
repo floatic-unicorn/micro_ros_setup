@@ -68,6 +68,7 @@ jobs:
         run: |
           source /opt/floatic/debian/ros/humble/setup.bash
           cd flody_ws/etc
+          rosdep update
           rosdep install --from-paths --ignore-src src
           colcon build
           source install/setup.bash
