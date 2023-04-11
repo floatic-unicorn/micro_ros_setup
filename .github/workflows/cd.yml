@@ -72,8 +72,9 @@ jobs:
           rosdep install --from-paths --ignore-src src -y
           colcon build
           source install/setup.bash
-          ros2 run micro_ros_setup create_agent_ws.sh
           cd src
+          ros2 run micro_ros_setup create_agent_ws.sh
+          cd micro_ros_setup
           floom-generate rosdebian
         shell: bash
       
