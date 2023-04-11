@@ -72,10 +72,10 @@ jobs:
           colcon build
           source install/setup.bash
           ros2 run micro_ros_setup create_agent_ws.sh
+          cd src
           floom-generate rosdebian
-          ls ../*.deb
         shell: bash
       
       - name: Upload to S3
         run: |
-          aws s3 cp $(ls flody_ws/*.deb) s3://robotics-workflow-archive/micro_ros_setup/
+          aws s3 cp $(ls debian_result/*.deb) s3://robotics-workflow-archive/micro_ros_setup/
